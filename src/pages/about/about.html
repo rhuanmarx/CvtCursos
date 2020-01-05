@@ -1,0 +1,19 @@
+
+<ion-content padding>
+    <!--<img src="assets/imgs/Noticias.png" alt="">-->
+    <ion-card color= 'teste2'>  
+    <img src="assets/imgs/logoCVT.png" alt="">  
+     </ion-card>
+    <ion-list>  
+        <ion-card *ngFor="let x of  Noticia" (click)="selecionaNoticia(x)" >
+          <ion-item color='teste2'>
+                  <img src={{x.Foto}}>
+          <h2 text-wrap><strong> {{x.Titulo}}</strong></h2>
+          <p><strong>{{x.Tema}}</strong></p>
+          <p><strong>Horário da Públicação:</strong> {{x.Horario}}</p>
+          <p><strong>Mais Infromações...</strong></p>
+         
+         </ion-item>
+        </ion-card>
+      </ion-list>
+</ion-content>

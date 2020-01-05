@@ -1,0 +1,31 @@
+
+
+<ion-content padding>
+        <!--<img src="assets/imgs/gg.png" alt="">-->
+        <ion-card color= 'teste2'>  
+        <img src="assets/imgs/logoCVT.png" alt="">  
+        </ion-card>
+    
+    <ion-list>  
+        <ion-searchbar [(ngModel)]="termo"></ion-searchbar>
+        <ion-card *ngFor="let x of  Curso | filtro : termo" (click)="selecionaCurso(x)">
+          <ion-item selectedIndex="2" color="teste">
+              <ion-avatar item-start>
+                  <img src={{x.Foto}}>
+              </ion-avatar>
+          <h2 text-wrap><strong> {{x.Nome}}</strong></h2>
+          <p><strong>Horario:</strong>  {{x.Horario}}</p>
+          <p><strong>Dias:</strong> {{x.DiasdaSemana}}</p>
+          <p><strong>Mais Infromações...</strong></p>
+         
+         </ion-item>
+        </ion-card>
+        <!--<ion-fab right bottom>
+                <button ion-fab mini color="secondary" (click)="adicionaInscricao()"><ion-icon name="add"></ion-icon></button>
+              </ion-fab>-->
+              
+    </ion-list>
+    <ion-fab right bottom>
+        <button ion-fab mini color= "secondary" (click)="adicionaInscricao()"><ion-icon name="md-person-add"></ion-icon></button>
+      </ion-fab>  
+</ion-content>

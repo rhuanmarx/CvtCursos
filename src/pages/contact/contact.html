@@ -1,0 +1,25 @@
+
+
+
+        <ion-content padding>
+                <ion-list>
+
+                  <ion-card *ngFor="let x of Inscricao "  (click)="selecionaInscricao(x)" color='teste'>
+                        <ion-item selectedIndex="2" color="teste">   
+                    <img src={{x.Foto}}>
+                    <h2 text-wrap><strong>{{x.Nome}}</strong></h2>
+                    <p><strong>Data de Nascimento:</strong></p> <p>{{x.DatadeNascimento}}</p>
+                    <p><strong>Idade:</strong></p> <p>{{x.Idade}}</p>
+                    <p><strong>Sexo:</strong></p> <p>{{x.Sexo}}</p>
+                    <p><strong>Data de Nascimento:</strong></p> <p>{{x.DatadeNascimento}}</p>
+                    <p><strong>Inscrição(ões):</strong></p> <p>{{x.CursosEscolhidos}}</p>
+                <p><strong>Mais Informações....</strong></p>    
+              </ion-item>
+              <ion-list color='teste'>
+                <button ion-button color="CVT" (click)= "signOut()">Sair</button>
+                <p><strong> WARNING :</strong>Você já está <strong> Logado </strong> caso seja um equivoco, basta clicar  <strong> Botão Acima </strong> para sair de nosso aplicativo!!!</p>       
+        </ion-list> 
+            </ion-card>
+            </ion-list>            
+    </ion-content>
+

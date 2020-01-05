@@ -1,0 +1,130 @@
+<!--
+  Generated template for the CadastraPPage page.
+
+  See http://ionicframework.com/docs/components/#navigation for more info on
+  Ionic pages and navigation.
+-->
+<ion-header>
+
+  <ion-navbar>
+    <ion-title>Cadastrar Seus Dados!!!</ion-title>
+  </ion-navbar>
+</ion-header>
+
+
+<ion-content padding>
+<ion-card color='teste2'>
+    <img src="{{currentPhoto}}"/>
+
+    <!--<ion-card-content>
+      <ion-card-title>
+        Aplicativo de Fotos
+      </ion-card-title>
+    </ion-card-content>-->
+  <ion-row>
+  <ion-col>
+    <button ion-button clear small color="light" icon-left (click)="getPhoto('picture')">
+      <ion-icon name='camera'></ion-icon>
+      Câmera
+    </button>
+  </ion-col>
+  <ion-col text-center>
+    <button ion-button clear small color="light" icon-left (click)="getPhoto('gallery')">
+      <ion-icon name='albums'></ion-icon>
+      Galeria
+    </button>
+  </ion-col>
+</ion-row>
+<p><strong> Tire a foto se prefirir, OU</strong></p>
+                <ion-item>
+                    <ion-label color="CVT">Foto: </ion-label>
+                    <ion-input  placeholder="coloque a  Url Css da base 64 de sua Foto Aqui!! ... " [(ngModel)]="Inscricao.Foto"
+                      name = "Foto">
+                    </ion-input>
+                </ion-item>
+                <p><strong> WARNING :</strong> Para colocar essa url <strong> Salve a imagem referente a seus Dados  </strong> e depois <strong> entre no site https://www.base64-image.de/</strong> para pegar a url na base 64!!!</p>
+<form (ngSubmit)="cadastrarInscricao()">
+    <ion-item>
+        <ion-label color="CVT">Nome: </ion-label>
+        <ion-input placeholder="Informe o Nome ... " 
+          [(ngModel)]="Inscricao.Nome"
+          name = "Nome">
+        </ion-input>
+    </ion-item>
+    <ion-item>
+        <ion-label color="CVT">Email: </ion-label>
+        <ion-input type="Email" placeholder="Informe o e-mail ... " [(ngModel)]="Inscricao.Email"
+          name = "Email">
+        </ion-input>
+    </ion-item>
+    <ion-item>
+        <ion-label color="CVT"> Nascimento: </ion-label>
+        <ion-input type="tel" placeholder="Sua Data de Nascimento ... " [(ngModel)]="Inscricao.DatadeNascimento"
+          name = "DatadeNascimento">
+        </ion-input>
+    </ion-item>
+    <ion-item>
+        <ion-label color="CVT">Idade: </ion-label>
+        <ion-input  placeholder="Informe sua Idade ... " [(ngModel)]="Inscricao.Idade"
+          name = "Idade">
+        </ion-input>
+    </ion-item>
+    <ion-item>
+        <ion-label color="CVT">Sexo: </ion-label>
+        <ion-input  placeholder="Informe seu Sexo ... " [(ngModel)]="Inscricao.Sexo"
+          name = "Sexo">
+        </ion-input>
+    </ion-item>
+    <ion-item>
+        <ion-label color="CVT">Escolaridade: </ion-label>
+        <ion-input  placeholder="Informe a Escolaridade ... " [(ngModel)]="Inscricao.Escolaridade"
+          name = "Escolaridade">
+        </ion-input>
+    </ion-item>
+    <ion-item>
+        <ion-label color="CVT"> Rua e Endereço </ion-label>
+        <ion-input  placeholder="Informe o Endereco ... " [(ngModel)]="Inscricao.RuaEndereco"
+          name = "RuaEndereco">
+        </ion-input>
+    </ion-item>
+    <ion-item>
+        <ion-label color="CVT">Cidade: </ion-label>
+        <ion-input  placeholder="Informe a Cidade ... " [(ngModel)]="Inscricao.Cidade"
+          name = "Cidade">
+        </ion-input>
+    </ion-item>
+    <ion-item>
+        <ion-label color="CVT">Municipio: </ion-label>
+        <ion-input  placeholder="Informe o Municipio ..." [(ngModel)]="Inscricao.Municipio"
+          name = "Municipio">
+        </ion-input>
+    </ion-item>
+    <ion-item>
+        <ion-label color="CVT">Telefone: </ion-label>
+        <ion-input  placeholder="Informe o Telefone ... " [(ngModel)]="Inscricao.Telefone"
+          name = "Telefone">
+        </ion-input>
+    </ion-item>
+    <ion-item>
+        <ion-label color="CVT">Nome do Pai: </ion-label>
+        <ion-input  placeholder="Informe o Nome do seu Pai ... " [(ngModel)]="Inscricao.NomedoPai"
+          name = "NomedoPai">
+        </ion-input>
+    </ion-item>
+    <ion-item>
+        <ion-label color="CVT">Nome da Mae: </ion-label>
+        <ion-input  placeholder="Informe o Nome da Mae ... " [(ngModel)]="Inscricao.NomedaMae"
+          name = "NomedaMae">
+        </ion-input>
+    </ion-item>
+    <ion-item>
+        <ion-label color="CVT">Cursos Escolhidos: </ion-label>
+        <ion-input  placeholder="Informe seus Cursos ... " [(ngModel)]="Inscricao.CursosEscolhidos"
+          name = "CursosEscolhidos">
+        </ion-input>
+    </ion-item>
+    <button ion-button type="submit" color="CVT">Cadastrar</button>
+  </form>
+  <p><strong> WARNING :</strong> Sua Inscrição por esse formulário é de modo <strong> Temporário  </strong> se ainda tivermos <STRONG>VAGAS</STRONG>  você recebera um Email nosso ou uma Ligação, para confirmar seu Comparecimento juntamente, ao CVT, para garantia Final de sua Inscrição, porém por hora seja bem-vindo!!!</p>
+</ion-card>
+</ion-content>

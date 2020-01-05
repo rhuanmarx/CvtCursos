@@ -1,0 +1,45 @@
+<!--
+  Generated template for the SignupPage page.
+
+  See http://ionicframework.com/docs/components/#navigation for more info on
+  Ionic pages and navigation.
+-->
+<ion-header>
+<ion-navbar color="teste2">
+  <ion-title>
+Deseja Cria Uma conta?
+  </ion-title>
+</ion-navbar>
+</ion-header>
+
+
+<ion-content padding>
+    <ion-card color= 'teste'>  
+        <img src="assets/imgs/CvtCentec.png" alt="">  
+<form #form="ngForm" novalidate>
+  <ion-list>
+
+    <ion-item>
+      <ion-label stacked color='CVT'>E-mail</ion-label>
+      <ion-input type="text" name="email" [(ngModel)]="user.email" #email="ngModel" required></ion-input>
+    </ion-item>
+    <ion-item *ngIf="email.errors && (email.dirty || email.touched)" class="text-danger">
+      O campo é obrigatório
+    </ion-item>
+
+    <ion-item>
+      <ion-label stacked color='CVT'>Senha</ion-label>
+      <ion-input type="password" name="password" [(ngModel)]="user.password" #password="ngModel" required></ion-input>
+    </ion-item>
+    <ion-item *ngIf="password.errors && (password.dirty || password.touched)" class="text-danger">
+      O campo é obrigatório
+    </ion-item>
+
+  </ion-list>
+
+  <button ion-button block color="teste2" [disabled]="!form.form.valid" (click)="CreateAccount()">
+    Criar conta!!!
+  </button>
+</form>
+</ion-card>
+</ion-content>
